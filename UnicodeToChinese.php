@@ -1,6 +1,7 @@
 <?php
-
-const GET_ALL_SUBDIRS = "ls -F | grep /$";
+/**
+ * @TODO  使用dir 函数,使用立即执行函数重构
+ */
 
 /**
  * 文件名转义,解决文件名里面的 空格 ( ) $ & 等特殊字符
