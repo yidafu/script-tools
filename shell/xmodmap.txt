@@ -1,0 +1,11 @@
+remove Lock = Caps_Lock
+remove Mod1 = Escape
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
+add Mod1 = Escape
+
+keycode  20 = Alt_L Meta_L Alt_L Meta_L
+keycode  21 = Alt_R Meta_R Alt_R Meta_R
+keycode  64 = minus underscore minus underscore
+keycode 108 = equal plus equal plus
