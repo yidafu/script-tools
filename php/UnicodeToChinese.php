@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 /**
  * @TODO  使用dir 函数,使用立即执行函数重构
