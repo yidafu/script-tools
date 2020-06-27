@@ -3,7 +3,7 @@
 # pull all repository diretories with current branch in specific directory
 # 
 # best partner is crontab.
-# you set a timer to run this script at 9 am every days.
+# you can set a timer to run this script at 9 am every days.
 # 0 9 * * * ./pull-repos.sh
 
 dest_dir="${GITLAB_DIR:-$HOME/gitlab}/*"
