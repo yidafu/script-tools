@@ -7,16 +7,18 @@ const fsp = fs.promises;
 const REACT_BASE_DIR = '/Users/yidafu/github/react';
 
 const TRANS_PACKAGES = [
-  'react',
-  'react-dom',
-  'scheduler',
-  'react-reconciler',
-  "react-is"
+  'react/src/**/*.js',
+  'react-dom/src/**/*.js',
+  'scheduler/src/**/*.js',
+  'react-reconciler/src/**/*.js',
+  "react-is/src/**/*.js",
+  "shared/**/*.js",
 ];
+
 
 TRANS_PACKAGES.forEach(packageName => {
   // /Users/yidafu/github/react/packages/scheduler
-  Glob(REACT_BASE_DIR + '/packages/' + packageName + "/src/**/*.js", (err, jsFilepaths) => {
+  Glob(REACT_BASE_DIR + '/packages/' + packageName, (err, jsFilepaths) => {
     if (err) {
       console.log(err);
       return;
@@ -30,6 +32,7 @@ TRANS_PACKAGES.forEach(packageName => {
 
           console.log("success compile: " + tsFilepath);
           fsp.writeFile(tsFilepath, tsContent);
+          fsp.unlink(jsFilepath);
         }).catch(err => {
           console.log(jsFilepath);
         });
